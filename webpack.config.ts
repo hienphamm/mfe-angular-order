@@ -14,11 +14,7 @@ export default (config: Configuration, options: CustomWebpackBrowserSchema, targ
       },
       shared: {
         '@angular/core': { singleton: true, eager: true, strictVersion: true },
-        '@angular/common': { singleton: true, eager: false, strictVersion: true },
-        '@angular/router': { singleton: true, eager: false, strictVersion: true },
-        'rxjs': { singleton: true, eager: false, strictVersion: true },
         'mfe-ui-kit': { singleton: true, eager: true, requiredVersion: false },
-        'mfe-ui-kit-angular': { singleton: true, eager: true, requiredVersion: false },
       },
     }),
   );

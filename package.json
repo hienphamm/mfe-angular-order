@@ -26,7 +26,7 @@
     "@angular/forms": "^20.1.0",
     "@angular/platform-browser": "^20.1.0",
     "@angular/router": "^20.1.0",
-    "mfe-ui-kit": "^0.0.4",
+    "mfe-ui-kit": "^0.0.8",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
