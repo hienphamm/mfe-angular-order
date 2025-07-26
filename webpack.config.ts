@@ -12,15 +12,22 @@ export default (config: Configuration, options: CustomWebpackBrowserSchema, targ
       exposes: {
         './OrderApp': './src/bootstrap.ts',
       },
-      shared: {}
-    })
+      shared: {
+        '@angular/core': { singleton: true, eager: true, strictVersion: true },
+        '@angular/common': { singleton: true, eager: true, strictVersion: true },
+        '@angular/router': { singleton: true, eager: true, strictVersion: true },
+        'rxjs': { singleton: true, eager: true, strictVersion: true },
+        'mfe-ui-kit': { singleton: true, eager: true, requiredVersion: false },
+        'mfe-ui-kit-angular': { singleton: true, eager: true, requiredVersion: false },
+      },
+    }),
   );
 
   config.output = {
     ...config.output,
     uniqueName: 'order',
     publicPath: 'auto',
-    scriptType: 'text/javascript'
+    scriptType: 'text/javascript',
   };
 
   config.optimization = {
